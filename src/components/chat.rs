@@ -140,7 +140,7 @@ impl Component for Chat {
 
         html! {
             <div class="flex w-screen">
-                <div class="flex-none w-56 h-screen bg-gray-100">
+                <div class="flex-none w-56 h-screen bg-blue-200">
                     <div class="text-xl p-3">{"Users"}</div>
                     {
                         self.users.clone().iter().map(|u| {
@@ -163,8 +163,8 @@ impl Component for Chat {
                     }
                 </div>
                 <div class="grow h-screen flex flex-col">
-                    <div class="w-full   h-14 border-b-2 border-gray-300"><div class="text-xl p-3">{"💬 Welcome to YewChat!"}</div></div>
-                    <div class="w-full  grow overflow-auto border-b-2 border-gray-300">
+                    <div class="w-full bg-blue-100  h-14 py-2 border-b-2 border-gray-300"><div class="text-xl p-3">{"💬 Welcome to YewChat!"}</div></div>
+                    <div class="w-full bg-blue-300 grow overflow-auto border-b-2 border-gray-300">
                         {
                             self.messages.iter().map(|m| {
                                 let user = self.users.iter().find(|u| u.name == m.from).unwrap();

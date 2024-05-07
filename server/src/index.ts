@@ -38,7 +38,7 @@ wss.on('connection', (ws: WebSocket) => {
                                 messageType: 'message',
                                 data: JSON.stringify({
                                     from: sender.nick,
-                                    message: parsed_data.data,
+                                    message: parsed_data.data.replace(":D", "😁"),
                                     time: Date.now(),
                                 }),
                             })
